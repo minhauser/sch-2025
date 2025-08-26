@@ -2,13 +2,16 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title Spring</title>
+    <title>Member Form</title>
 </head>
 <body>
-    <h1>Hello Spring</h1>
+    <h1>Member Form</h1>
 
-    <h1 th:text="'이름: ' + ${name}"></h1>
-    <h1 th:text="'나이: ' + ${age}"></h1>
+    <h1 th:text="'이름: ' + ${member.getName()}"></h1>
+    <h1 th:text="'나이: ' + ${member.getAge()}"></h1>
+    <h1 th:text="'주소: ' + ${member.getAddress()}"></h1>
+    <h1 th:text="'과목: ' + ${member.getSubject()}"></h1>
+
 
 </body>
 </html>

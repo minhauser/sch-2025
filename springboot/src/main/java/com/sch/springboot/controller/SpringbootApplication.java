@@ -1,4 +1,4 @@
-package domain;
+package com.sch.springboot.controller;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
