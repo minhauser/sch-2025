@@ -12,16 +12,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 
     public class SpringController {
-
-    @ResponseBody
-    @GetMapping("/spring-apil")
-    public String springApi(@ModelAttribute Member member){
-        System.out.println(member.getName());
-        System.out.println(member.getAge());
-
-        return member.toString(); // 클라이언트 - String 문자열 전송
-    }
-
     @GetMapping("/spring")
     public String spring(@RequestParam("name")  String name,
                          @RequestParam("age") int age,
