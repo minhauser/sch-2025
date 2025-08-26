@@ -5,13 +5,23 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class MemberController {
-    @GetMapping("/member")
+    @PostMapping ("/member")
     public String member(@ModelAttribute Member member, Model model) {
+        System.out.println("Post");
+
         model.addAttribute("member",member);
         return "member"; //View name + model 객체
+    }
+    @GetMapping("/member")
+    public String memer(@ModelAttribute Member member, Model model) {
+        model.addAttribute("member",member);
+        return "member";
+
+
     }
 }
