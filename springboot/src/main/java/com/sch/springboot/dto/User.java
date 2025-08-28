@@ -1,9 +1,8 @@
 package com.sch.springboot.dto;
 
 public class User {
-
     private String id;
-    private String password;
+    private String pass;
     private String name;
     private String email;
 
@@ -15,12 +14,12 @@ public class User {
         this.id = id;
     }
 
-    public String getPassword() {
-        return password;
+    public String getPass() {
+        return pass;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setPass(String pass) {
+        this.pass = pass;
     }
 
     public String getName() {

@@ -7,6 +7,12 @@ public class Member {
     private String address;
     private String subject;
 
+    //Constructor
+    public Member() {}
+
+    //Method : setter, getter
+
+
     public String getSubject() {
         return subject;
     }
@@ -14,11 +20,6 @@ public class Member {
     public void setSubject(String subject) {
         this.subject = subject;
     }
-
-    //Constructor
-    public Member(){ }
-    //Method : setter, getter
-
 
     public String getName() {
         return name;
@@ -44,3 +45,10 @@ public class Member {
         this.address = address;
     }
 }
+
+
+
+
+
+
+

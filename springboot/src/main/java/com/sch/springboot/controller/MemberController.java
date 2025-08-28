@@ -8,22 +8,25 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 public class MemberController {
     @ResponseBody
-    @PostMapping ("/member-api")
+    @PostMapping("/member-api")
     public Member memberApi(@ModelAttribute Member member) {
-        return member; //Rest API
+        return member;  //Rest API
     }
 
-    @PostMapping ("/member")
+
+    @PostMapping("/member")
     public String member(@ModelAttribute Member member, Model model) {
-        System.out.println("Post");
-        model.addAttribute("member",member);
-        return "member"; //View name + model 객체
-    }
-    @GetMapping("/member")
-    public String memer(@ModelAttribute Member member, Model model) {
-        model.addAttribute("member",member);
+        System.out.println("Post!!");
+        model.addAttribute("member", member);
         return "member";
+    }
 
+    @GetMapping("/member")
+    public String memer(@ModelAttribute Member member,
+                        Model model) {
 
+        model.addAttribute("member", member);
+
+        return "member";  //view name + model 객체
     }
 }
