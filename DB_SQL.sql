@@ -3,7 +3,7 @@
 */
 
 -- 	데이터베이스 생성
--- create database hrdb_spring;
+create database hrdb_spring;  -- 처음에 실행 한번만
 
 -- 데이터베이스 확인
 use hrdb_spring;
@@ -71,4 +71,44 @@ update employee set department = 'sales'
 
 SELECT * FROM EMPLOYEE;    
     
-    
+/**************
+
+member 테이블 생성 및 실행
+
+***************/
+show tables;
+drop table member;
+
+create table member(
+	sno 	int 	primary key,
+    name	varchar(20),
+    address	varchar(50),
+    department	varchar(50),
+    mdate	datetime
+);
+
+desc member;
+select * from member;
+select * from member where sno = 61968;
+
+/**************************
+
+Dwitter 테이블 생성 및 실행
+
+**************************/
+create table dwitter(
+	id	int	auto_increment	primary	key,
+    name	varchar(50),
+    message	varchar(255),
+    image	varchar(255),
+    sdate	date
+);
+
+show tables;
+
+select * from dwitter;
+
+select * from dwitter where id = 1;
+
+delete from dwitter where id = 1;
+
